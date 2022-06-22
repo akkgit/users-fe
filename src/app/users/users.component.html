@@ -1,0 +1,18 @@
+<div *ngIf="!loading">
+<div *ngIf="!users && !message">No users exist</div>
+<div class="alert alert-danger" *ngIf="message">Error:{{message}}</div>
+<table *ngIf="users" class="table table-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
